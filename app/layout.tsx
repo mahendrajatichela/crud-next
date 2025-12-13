@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CustomButton from "./_components/cus-btn";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +25,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="antialiased">
+        <div className="items-center justify-center h-screen w-screen bg-teal-400 font-sans text-black">
+          <main className="w-full h-full flex">
+            <div className="flex-1/3 text-center p-10 flex flex-col justify-between">
+              <CustomButton className="mb-4 w-full rounded-2xl bg-teal-50">
+                Simple Form
+              </CustomButton>
+              <CustomButton className="mb-4 w-full rounded-2xl bg-teal-50">
+                Medium Form
+              </CustomButton>
+              <CustomButton className="mb-4 w-full rounded-2xl bg-teal-50">
+                Complex Form
+              </CustomButton>
+            </div>
+            <div className="flex-2/3 text-center rounded-4xl bg-white m-10">
+              {children}
+            </div>
+          </main>
+        </div>
       </body>
     </html>
   );
