@@ -26,20 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="items-center justify-center h-screen w-screen bg-teal-400 font-sans text-black">
+        <div className="items-center justify-center h-screen w-screen bg-[#d6e1ff] font-sans text-black">
           <main className="w-full h-full flex">
             <div className="flex-1/3 text-center p-10 flex flex-col justify-between">
-              <CustomButton className="mb-4 w-full rounded-2xl bg-teal-50">
+              <CustomButton className="mb-4 w-full rounded-2xl bg-brown-50 border border-[#5125d3] text-[#301c6c] shadow-md shadow-[#b49df8] hover:cursor-pointer hover:scale-102 bg-[#8d85fe]">
                 Simple Form
               </CustomButton>
-              <CustomButton className="mb-4 w-full rounded-2xl bg-teal-50">
+              <CustomButton className="mb-4 w-full rounded-2xl bg-brown-50 border border-[#5125d3] text-[#301c6c] shadow-md shadow-[#b49df8] hover:cursor-pointer hover:scale-102 bg-[#8d85fe]">
                 Medium Form
               </CustomButton>
-              <CustomButton className="mb-4 w-full rounded-2xl bg-teal-50">
+              <CustomButton className="mb-4 w-full rounded-2xl bg-brown-50 border border-[#5125d3] text-[#301c6c] shadow-md shadow-[#b49df8] hover:cursor-pointer hover:scale-102 bg-[#8d85fe]">
                 Complex Form
               </CustomButton>
             </div>
-            <div className="flex-2/3 text-center rounded-4xl bg-white m-10">
+            <div className="flex-2/3 text-center rounded-4xl bg-white m-10 max-h-screen overflow-auto scroll-smooth border border-[#5125d3]">
               {children}
             </div>
           </main>
